@@ -12,6 +12,7 @@ undefined: Value taken by a variable that is not yet defined ('empty value')
 ex. let children;
 
 Null: Also means 'empty value'
+will show up as object if used under typeof which is a bug. not fixed because of legacy reasons
 
 Symbol (ES2015):Value that is unique and cannot be changed [not useful for now]
 

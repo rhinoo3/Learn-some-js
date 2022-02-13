@@ -15,7 +15,7 @@ console.log(population);
 if (country === "Canada") alert('this is nothingness')
 //how to comment out lines of code
 console.log(40 + 8 + 23 - 10);
-*/
+
 //will show below that it is a boolean
 let javascriptIsFun = true;
 console.log(javascriptIsFun)
@@ -27,3 +27,16 @@ console.log(typeof javascriptIsFun);
 //changed it to a string
 javascriptIsFun = 'YES!';
 console.log(typeof javascriptIsFun);
+
+let year;
+console.log(year)
+console.log(typeof year);
+
+year = 1992;
+console.log(typeof year);
+
+console.log(typeof null);
+*/
+
+
+
