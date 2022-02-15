@@ -152,14 +152,13 @@ this is too easy.`);
 // if(){
 // else
 // }
+
 const age = 17;
 const yearsLeft = 18 - age;
 
-let years = "year"
+let years = "years"
 if (yearsLeft === 1) {
-  years = "year"
-} else {
-  years = "years"
+  years = "year(s)"
 }
 if (age >= 18) {
   console.log('Adam can start his driving license 🤦‍♀️');
@@ -167,6 +166,20 @@ if (age >= 18) {
   console.log(`Adam is too young. Wait another ${yearsLeft} ${years} :)`);
 }
 
+const age = 15;
+const yearsLeft = 18 - age;
+
+// let years = "years"
+// if (yearsLeft === 1) {
+// years = "year(s)"
+// }
+if (age >= 18) {
+  console.log('Adam can start his driving license 🤦‍♀️');
+} else if (yearsLeft === 1) {
+  console.log(`Adam is too young. Wait  ${yearsLeft} year :)`);
+} else {
+  console.log(`Adam is too young. Wait another ${yearsLeft} years`);
+}
 const birthYear = 2001;
 
 let century;
@@ -200,6 +213,75 @@ if (markBMI > johnBMI) {
   console.log(`John's BMI (${johnBMI}) is higher than Mark's BMI (${markBMI})!`)
 }
 console.log(`John ${johnBMI}, Mark ${markBMI}, is Mark's higher? ${markHigherBMI}`);
-*/
+
 
 // Type Conversion and Coercion
+
+// Type Conversion is manual
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas')); //NaN - Not a number (invalid number)
+console.log(typeof NaN);
+
+//string and a number
+console.log(String(23), 23);
+
+// Type Coersion is when JS automatically converts
+console.log('I am ' + 23 + ' years old')
+console.log('23' + '10' - 3);
+console.log('23' / '2');
+
+
+//Truthy and Falsy Values
+// Not false right away but will convert false when being converted to a boolean
+// 5 falsy values: 0, '', undefined, null, NaN
+// Truthy: any string that is not empty, any number that is not 0
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({})); //empty object
+console.log(Boolean('')); //empty string
+
+// How type Coersion works in if else
+
+const money = 'Jonas';
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log('You should get a job');
+}
+
+let height = 0;
+if (height) {
+  console.log('Woo height is defined');
+} else {
+  console.log('Sad sad undefined days bruh');
+}
+
+
+// Equality Operators ==(loose type coersion) vs === (strict no type coersion)
+// always be sure to use the strict operator
+const age = '18';
+if (age === 18) console.log('You are officially an adult! (strict)');
+
+if (age == 18) console.log('You are officially an adult! (loose)'); //pretend she dont exist.
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 24) {
+  console.log('Cool nice number bruh!');
+} else if (favourite === 7) {
+  console.log('7 is also a cool number');
+} else {
+  console.log('pick a better number');
+}
+
+if (favourite !== 24) console.log('Why not 23?')
+*/
+
+//Boolean Logic
