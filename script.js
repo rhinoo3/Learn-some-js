@@ -99,7 +99,7 @@ const ageSarah = now - 2018;
 console.log(now - 1991 > now - 2018);
 
 let x, y;
-//based off the operator precedence. subtraction left to right (higher precedence), equal is right to left (lower precedence) 
+//based off the operator precedence. subtraction left to right (higher precedence), equal is right to left (lower precedence)
 x = y = 25 - 10 - 5; // x = y = 10, x = 10
 console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
@@ -122,4 +122,84 @@ const johnBMI = massJohn / heightJohn ** 2;
 const markHigherBMI = markBMI > johnBMI;
 
 console.log(johnBMI, markBMI, markHigherBMI);
+
+//Strings and template literals
+const firstName = 'Ryan';
+const job = 'lineman';
+const birthYear = 1991;
+const year = 2037;
+
+const ryan = "I'm" + ' ' + firstName + ', a' + ' ' + (year - birthYear) + " " + "year old" + ' ' + job + '!';
+console.log(ryan)
+//back tics for template literals. and use ${} for the variables. no quotations needed like above
+const ryanNew = `I'm ${firstName} a ${year - birthYear} year old ${job}!`;
+console.log(ryanNew);
+
+console.log(`Just a regular string...`);
+
+//old hard way of multiple lines
+console.log('String with \n\
+multiple \n\
+lines');
+
+//easier way with template literals
+console.log(`String that will span multiple lines
+like so
+this is too easy.`);
+
+//Taking Decisions: if / else statements
+// called a control structure
+// if(){
+// else
+// }
+const age = 17;
+const yearsLeft = 18 - age;
+
+let years = "year"
+if (yearsLeft === 1) {
+  years = "year"
+} else {
+  years = "years"
+}
+if (age >= 18) {
+  console.log('Adam can start his driving license 🤦‍♀️');
+} else {
+  console.log(`Adam is too young. Wait another ${yearsLeft} ${years} :)`);
+}
+
+const birthYear = 2001;
+
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+
+//Coding Challenege #2
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+// const massMark = 95;
+// const heightMark = 1.88;
+// const massJohn = 85;
+// const heightJohn = 1.76;
+
+const markBMI = massMark / heightMark ** 2;
+const johnBMI = massJohn / heightJohn ** 2;
+const markHigherBMI = markBMI > johnBMI;
+
+//more common to write the actual condition in the if statement
+if (markBMI > johnBMI) {
+  console.log(`Marks's BMI (${markBMI}) is higher than John's (${johnBMI})!`)
+} else {
+  console.log(`John's BMI (${johnBMI}) is higher than Mark's BMI (${markBMI})!`)
+}
+console.log(`John ${johnBMI}, Mark ${markBMI}, is Mark's higher? ${markHigherBMI}`);
 */
+
+// Type Conversion and Coercion
