@@ -284,8 +284,5 @@ if (favourite === 24) {
 if (favourite !== 24) console.log('Why not 23?')
 */
 
-<<<<<<< HEAD
-//Boolean Logic 
-=======
+ 
 //Boolean Logic you got this cuzzo
->>>>>>> 604924a270b627f322a83823a982f31d6be135f5
