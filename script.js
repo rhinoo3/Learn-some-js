@@ -274,15 +274,174 @@ console.log(favourite);
 console.log(typeof favourite);
 
 if (favourite === 24) {
-  console.log('Cool nice number bruh!');
+  alert('Cool nice number bruh!');
 } else if (favourite === 7) {
-  console.log('7 is also a cool number');
+  alert('7 is also a cool number');
 } else {
-  console.log('pick a better number');
+  alert('pick a better number');
 }
 
 if (favourite !== 24) console.log('Why not 23?')
-*/
 
- 
+
+
 //Boolean Logic you got this cuzzo
+// and (&&), or(||) , not (!): has precedence over other operators
+
+//Logical operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; //B
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasGoodVision);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (hasDriversLicense && hasGoodVision) {
+//   console.log('Sarah is able to drive')
+// } else {
+//   console.log('someone else should drive');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('Sarah is able to drive')
+} else {
+  console.log('someone else should drive');
+}
+
+
+//Challenge number 3.
+//Test data
+//messed up with the math. have to throw it in brackets first.
+const dolphonsAvgScore1 = (96 + 108 + 89) / 3
+const koalasAvgScore1 = (88 + 91 + 110) / 3
+console.log(`dolpins ${dolphonsAvgScore1}, koala${koalasAvgScore1}`)
+
+if (dolphonsAvgScore1 > koalasAvgScore1) {
+  console.log("Dolphins are the winner");
+} else {
+  console.log('Koalas are the winner')
+}
+//different data and sorting out winners and draw and if score is above 100 to win.
+const dolphinsAvgScore = (99 + 99 + 100) / 3;
+const koalasAvgScore = (99 + 99 + 100) / 3;
+console.log(dolphinsAvgScore, koalasAvgScore);
+
+if (dolphinsAvgScore > koalasAvgScore && dolphinsAvgScore >= 100) {
+  console.log('dolphin win');
+} else if (dolphinsAvgScore < koalasAvgScore && koalasAvgScore >= 100) {
+  console.log('koala win');
+} else if (dolphinsAvgScore === koalasAvgScore && dolphinsAvgScore >= 100 && koalasAvgScore >= 100) {
+  console.log('Its a draw');
+} else {
+  console.log('there is no winner');
+}
+
+const hasDriversLicense = true
+const hasGoodVision = true
+const isTired = !false
+
+if (hasDriversLicense && hasGoodVision && isTired) {
+  console.log("Caylee can drive")
+} else {
+  console.log("caylee should not drive")
+}
+
+// The switch Statement
+
+const day = 'Tuesday';
+
+
+// switch (day) {
+//   case 'Monday' && 'monday': //day === 'monday'
+//     console.log('Plan learning structure');
+//     console.log('Go to coding school');
+//     break;
+//   case 'Tuesday':
+//     console.log('prepare to learn');
+//     break;
+//   case 'Wednesday':
+//   case 'Thursday':
+//     console.log('Write code examples');
+//     break;
+//   case 'Friday':
+//     console.log('record myself');
+//     break;
+//   case 'Saturday':
+//   case 'Sunday':
+//     console.log('Enjoy the weekend')
+//     break;
+//   default:
+//     console.log('Not a valid day');
+//     break;
+// }
+
+// if else
+if (day === 'Monday') {
+  console.log('winner');
+} else if (day === 'Tuesday') {
+  console.log('winner winner');
+} else if (day === 'Wednesday' || day === 'Thursday') {
+  console.log('two times the winner')
+} else if (day === 'friday') {
+  console.log('go home')
+} else if (day === 'Saturday' || day === 'Sunday') {
+  console.log('relax bigboi')
+} else {
+  console.log('Not a real day')
+}
+
+
+//Statements and Expressions
+//Expressions piece of code that produces a value
+3 + 4
+1991
+true && false && !false
+
+//Statements does not produce a value on itself
+// if it ends in semicolon then its likely a statement
+if (23 > 10) {
+  const str = '23 is bigger' //the string itself is an expression but the code produces the variable.
+}
+const me = 'Ryan'
+console.log(`I'm ${2022 - 1992} years old ${me}`);
+
+
+//Conditional (Ternary) Operator: all in one line similar to if else statement
+//Operator which produces a value in turn in a Expression
+const age = 17;
+// age >= 18 ? console.log('I like to drink wine') :
+//   console.log('I like to drink water');
+
+const drink = age >= 18 ? 'wine' : 'water'
+console.log(drink);
+
+// Ternary Operator allows this big code into something smaller above
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine'
+} else {
+  drink2 = 'water'
+}
+console.log(drink2)
+
+console.log(`I like to drink ${drink2}`)
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)
+
+//Challenge #4
+const bill1 = 275;
+const bill2 = 40;
+const bill3 = 400;
+
+
+// const tip = bill1 >= 50 && bill1 <= 300 ? 'Tip is 15%' : 'Tip is 20%'
+// console.log(`The bill was ${bill1}, the tip was ${bill1 * 0.15}, and the total value ${bill1 * 1.15}`)
+
+const tip = bill1 >= 50 && bill1 <= 300 ? bill1 * 0.15 : bill1 * 0.20;
+console.log(`The bill was ${bill1}, the tip was ${tip}, the total value ${tip + bill1}`)
+*/
+//End of Part 1 bruddah
