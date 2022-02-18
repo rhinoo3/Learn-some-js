@@ -127,7 +127,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 }
 console.log(yearsUntilRetirement(1992, 'Ryan'));
 console.log(yearsUntilRetirement(1947, 'Mike'));
-*/
+
 
 //challenge #1
 // function 'checkwinner' takes the avg score of each team as parameters (avgDolphin, avgKoalas) and then logs the winner to the console. together with the victory points. ex. "koalas win (30 vs 13)"
@@ -153,3 +153,26 @@ scoreDolphins = calcAverage(55, 77, 34)
 scoreKoalas = calcAverage(45, 800, 99)
 console.log(scoreDolphins, scoreKoalas)
 checkwinner(scoreDolphins, scoreKoalas)
+*/
+
+// Intro to Arrays - Data structure. container that holds variables and then later reference them
+// long way below.
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+//Arrays. line 165 is literal syntax
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2008, 2020);
+console.log(years);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+//number of elements in any array
+console.log(friends.length);
+// friends.length is not 0 based.
+console.log(friends[friends.length - 1])
+

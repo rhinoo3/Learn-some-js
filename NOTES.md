@@ -25,3 +25,16 @@ Use let when defining a variable at first but if you would like to change the va
 ex. let javascriptIsFun = true;
 javascript = 'YES!'
 
+Javascript is a highlevel object oriented multi-paradigm programming language
+-High level:Don't have to worry about complex things like memory managament
+-object oriented: based on objets, for storing most kinds of data
+Multi-paradigm: Can use different styles(structing)
+Programming: instructing computers to do things
+
+Role in web dev.
+HTML: content, images, buttons
+CSS: Presentating, styling & layout
+JS:Real language, add interactive, load data, load apps
+
+ES6/ES2016: Biggest update(Modern Javascript)
+ECMAscript (ES5)
