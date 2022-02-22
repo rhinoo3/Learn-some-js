@@ -38,3 +38,20 @@ JS:Real language, add interactive, load data, load apps
 
 ES6/ES2016: Biggest update(Modern Javascript)
 ECMAscript (ES5)
+
+const living = {
+    rent: 2400 * 12,
+    carPayment: 600 * 12,
+    gas: (90 * 2) * 12,
+    insurance: 200 * 12,
+    phone: 90 * 12,
+    grocery: (100 * 4) * 12,
+    utility: (64 + 50 + 80 + 95) * 12, //water, gas, internet, electricity 
+    misc: 500 * 12,//coffee, dinners, clothes, gym, subscriptons(netflix)
+    travel: 2500 * 2
+
+}
+const costOfLiving = (living.rent + living.carPayment + living.gas + living.insurance + living.phone + living.grocery + living.utility + living.misc + living.travel)
+
+const moneyLeft = 57000 - costOfLiving;
+console.log(moneyLeft)

@@ -12,6 +12,7 @@ if (hasDriversLicense) console.log('I can drive!');
 // const interfaces = 'Audio';
 // const private = 534;
 
+/////////////////////////////////////////
 
 // Functions can hold 1 or more complete lines of code
 // functions are values
@@ -61,6 +62,7 @@ const calcAge2 = function (currentYear, birthYear) {
 const age2 = calcAge2(2022, 1992);
 console.log(age1, age2);
 
+/////////////////////////////////////////
 
 // Arrow function lesson
 
@@ -128,6 +130,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 console.log(yearsUntilRetirement(1992, 'Ryan'));
 console.log(yearsUntilRetirement(1947, 'Mike'));
 
+/////////////////////////////////////////
 
 //challenge #1
 // function 'checkwinner' takes the avg score of each team as parameters (avgDolphin, avgKoalas) and then logs the winner to the console. together with the victory points. ex. "koalas win (30 vs 13)"
@@ -154,6 +157,7 @@ scoreKoalas = calcAverage(45, 800, 99)
 console.log(scoreDolphins, scoreKoalas)
 checkwinner(scoreDolphins, scoreKoalas)
 
+/////////////////////////////////////////
 
 // Intro to Arrays - Data structure. container that holds variables and then later reference them
 // long way below.
@@ -203,6 +207,8 @@ console.log(age1, age2, age3);
 
 const ages = [(friends[0]), calcAge(years[0]), (friends[1]), calcAge(years[1]), (friends[2]), calcAge(years[4])]
 console.log(ages)
+
+/////////////////////////////////////////
 
 //Basic Array Operations(Methods)
 
@@ -268,6 +274,7 @@ const totals = [calcTotal([bills[0]]), calcTotal([bills[1]]), calcTotal([bills[2
 const totalsChallenge = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(tips, totals, totalsChallenge);
 
+/////////////////////////////////////////
 
 // Intro to Ojects {}
 // The order matters in arrays.
@@ -317,7 +324,7 @@ console.log(ryan)
 // "Jonas has 3 friends, and his best friend is called Justin"
 
 console.log(`${ryan.firstName} has ${ryan.friends.length} friends, and his best friend is called ${ryan.friends[0]} `)
-
+/////////////////////////////////////////
 
 // functions are values.
 // ryan.calcAge is calling on the method. when using 'this' points to ryan it will use the propety inside the ryan object.
@@ -358,36 +365,36 @@ console.log(ryan.summary)
 // make a string when using bracket notations
 // console.log(ryan['calcAge'](1992));
 
-
+/////////////////////////////////////////
 //Challenge
 // "Ryan is a 46-year old teacher, and he has a/no drivers license" ^^
-*/
-// const markMiller = {
-//     fullName: 'Mark Miller',
-//     mass: 78,
-//     height: 1.69,
-//     calcBMI: function () {
-//         this.markBMI = this.mass / this.height ** 2
-//         return this.markBMI
-//     },
-// }
-// const johnSmith = {
-//     Fullname: 'John Smith',
-//     mass: 92,
-//     height: 1.95,
-//     calcBMI: function () {
-//         this.johnBMI = this.mass / this.height ** 2
-//         return this.johnBMI
-//     },
 
-// }
+const markMiller = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.markBMI = this.mass / this.height ** 2
+        return this.markBMI
+    },
+}
+const johnSmith = {
+    Fullname: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.johnBMI = this.mass / this.height ** 2
+        return this.johnBMI
+    },
+
+}
 // const checkWinner = function () {
-//     if (markMiller.markBMI > johnSmith.johnBMI) {
-//         return `Mark's BMI ${markMiller.markBMI} is higher than John's ${johnSmith.johnBMI}!`
-//     } else {
-//         return `Johns's BMI ${johnSmith.johnBMI} is higher than Marks's ${markMiller.markBMI}!`
-//     }
-// }
+    if (markMiller.markBMI > johnSmith.johnBMI) {
+        return `Mark's BMI ${markMiller.markBMI} is higher than John's ${johnSmith.johnBMI}!`
+    } else {
+        return `Johns's BMI ${johnSmith.johnBMI} is higher than Marks's ${markMiller.markBMI}!`
+    }
+}
 // console.log(johnSmith.calcBMI() > markMiller.calcBMI())
 // console.log(checkWinner)
 
@@ -417,5 +424,35 @@ if (mark.bmi > john.bmi) {
 } else if (john.bmi > mark.bmi) {
     console.log(`${john.Fullname}'s ${john.bmi} is higher than ${mark.fullName}'s BMI ${mark.bmi}!`)
 }
-// console.log(mark.bmi, john.bmi);
-// console.log(checkWinner(mark.bmi, john.bmi))
+console.log(mark.bmi, john.bmi);
+console.log(checkWinner(mark.bmi, john.bmi))
+// redid the challenge after dinner to see if I could recall how to do it without reference to the one above....for redudancy really
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 95,
+    height: 1.95,
+    calcBmi: function () {
+        this.bmi = this.mass / this.height ** 2
+    }
+}
+
+const john = {
+    fullName: 'John Smith',
+    mass: 78,
+    height: 1.69,
+    calcBmi: function () {
+        this.bmi = this.mass / this.height ** 2
+    }
+}
+mark.calcBmi();
+john.calcBmi();
+console.log([mark.bmi], [john.bmi])
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName} (${mark.bmi}) BMI is higher than ${john.fullName} (${john.bmi})BMI!`)
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName} (${john.bmi}) is higher than ${mark.fullName} (${mark.bmi})!`)
+}
+*/
+/////////////////////////////////////////
+// The for Loop
