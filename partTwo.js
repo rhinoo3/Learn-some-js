@@ -453,6 +453,165 @@ if (mark.bmi > john.bmi) {
 } else if (john.bmi > mark.bmi) {
     console.log(`${john.fullName} (${john.bmi}) is higher than ${mark.fullName} (${mark.bmi})!`)
 }
-*/
+
 /////////////////////////////////////////
-// The for Loop
+// The 'for' Loop
+
+// console.log('Lifting weights repetition 1');
+// console.log('Lifting weights repetition 2');
+// console.log('Lifting weights repetition 3');
+// console.log('Lifting weights repetition 4');
+// console.log('Lifting weights repetition 5');
+// console.log('Lifting weights repetition 6');
+// console.log('Lifting weights repetition 7');
+// console.log('Lifting weights repetition 8');
+// console.log('Lifting weights repetition 9');
+// console.log('Lifting weights repetition 10');
+
+//Loop that has a counter
+//has 3 parts : first part is initial value
+// we use let because the variable will be updated by the for loop.
+//second part is logical condition that is evaluated before each iteration of the loop. before it is executed. as soon as it is false it will stop.
+// for loop keeps running while condition is true
+// third part: update the counter after each iteration. inscrease by 1...ex rep=rep+1 also rep++
+// can start and end at any number you would like
+// for (let rep = 1; rep <= 10; rep++) {
+//     // console.log(`Lifting weights repitition 1}`);
+//     console.log(`Lifting weights repitition ${rep}`);
+// }
+//functions are values, can create key value pair where value is functinos can in fact ad functions to objects. Key is a property
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights rep ${rep}`)
+}
+
+////////////////////////////////////////////////
+//Looping Arrays, Breaking and Continuing
+
+const ryan = [
+    'Ryan',
+    'LaPorte',
+    2022 - 1992,
+    'lineman',
+    ['Justin', 'Greg', 'Pat'],
+    true,
+    'bobby'
+];
+const types = [];
+// console.log(ryanArray[0]);
+// console.log(ryanArray[1]);
+// ...ryanArray
+// console.log(ryanArray[4]);
+//ryanArray[5] does NOT exist
+//counter variable name is 'i'
+for (let i = 0; i < ryan.length; i++) {
+    // reading from ryan array
+    console.log(ryan[i], typeof ryan[i]);
+    // filling types array
+    // types[i] = typeof ryan[i];
+    types.push(typeof ryan[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2022 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < ryan.length; i++) {
+    if (typeof ryan[i] !== 'string') continue;
+    console.log(ryan[i], typeof ryan[i]);
+}
+
+//
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < ryan.length; i++) {
+    if (typeof ryan[i] === 'number') break;
+    console.log(ryan[i], typeof ryan[i]);
+}
+
+////////////////////////////////////////////////
+//Looping backwards and loops in loops
+
+const ryan = [
+    'Ryan',
+    'LaPorte',
+    2022 - 1992,
+    'lineman',
+    ['Justin', 'Greg', 'Pat'],
+    true
+];
+
+for (let i = ryan.length - 1; i >= 0; i--) {
+    console.log(i, ryan[i])
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`------- Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weights rep ${rep}`);
+    }
+}
+
+/////////////////////////////////////////
+// While loop
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+// while you can only specify a condition
+// all you need is the while condition for it to run. 
+let rep = 1;
+while (rep <= 10) {
+    // console.log(`WHILE: Lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice);
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`loop is about to end...`)
+}
+*/
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// console.log(bills.length - 1);
+
+const tips = [];
+const totals = [];
+/* This is my way
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]))
+    totals.push(calcTip(bills[i]) + bills[i])
+}
+*/
+//This way the function is just calculated once..redundency 
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum +arr[i]
+        sum += arr[i]
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+console.log(`Tips: ${tips}, Totals: ${totals}`)
+
+
+    // const tips = [calcTip([bills[0]]), calcTip([bills[1]]), calcTip([bills[2]])];
+    // const totalsChallenge = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
