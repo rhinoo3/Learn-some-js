@@ -27,8 +27,8 @@
 // };
 // console.log(oZ);
 // company building a smart home thermometer. Most recent task is this: Given an array of temperatures of one day, calculate the temperature amplitude. keep in mind sometimes there might be a sensor error.
-// const temperatures = [13, -2, -6, -1, 'error', 9, 25, 13, 17, 15, 14, 9, 5];
-// const temperatures2 = [14, -5, -7, -14, 'error', 17, 15, 8, 7, 3];
+// const temperatures = [13, 2, 6, 1, 'error', 9, 25, 13, 17, 15, 14, 9, 5];
+// const temperatures2 = [14, 5, 7, 14, 'error', 17, 15, 8, 7, 3];
 // console.log(temperatures);
 //1) understand the problem.
 // what is temp amplitude? Answer: difference between highest and lowest temp.
@@ -95,33 +95,60 @@
 // console.log(amplitudeNew);
 // Kelvin 273*temp
 // Prompt always returns a string//////////////////////
-const measureK = function () {
-  const measurement = {
-    type: 'temp',
-    unit: 'celsius',
-    value: Number(prompt('Degrees celcius')),
-  };
-  //found the bug, prompt returns a string
-  console.table(measurement);
-  // console.log(measurement.value);
-  // console.warn(measurement.value);
-  // console.error(measurement.value);
-  const kelvin = measurement.value + 273;
-  return kelvin;
-};
+// const measureK = function () {
+//   const measurement = {
+//     type: 'temp',
+//     unit: 'celsius',
+//     value: Number(prompt('Degrees celcius')),
+//   };
+//   //found the bug, prompt returns a string
+//   console.table(measurement);
+//   // console.log(measurement.value);
+//   // console.warn(measurement.value);
+//   // console.error(measurement.value);
+//   const kelvin = measurement.value + 273;
+//   return kelvin;
+// };
 // console.log(measureK());
 
-const testArr = [24, 25, 26, 27, 28];
-const reverseMyArray = function (arr) {
-  const arrayOne = arr;
-  let arrayTwo = [];
+// const testArr = [24, 25, 26, 27, 28];
+// const reverseMyArray = function (arr) {
+//   const arrayOne = arr;
+//   let arrayTwo = [];
 
-  for (let i = 0; i < arrayOne.length; i++) {
-    arrayTwo.push(arrayOne[i]);
+//   for (let i = 0; i < arrayOne.length; i++) {
+//     arrayTwo.push(arrayOne[i]);
+//   }
+//   return arrayTwo.reverse();
+// };
+// const newArr = reverseMyArray(testArr);
+// console.log(newArr);
+
+// const noNeg = function () {};
+// const greg = show_employee():
+//     name = input("Employee name:  ")
+//     salary = input("Employee salary:  ")
+//     default_salary = 9000
+
+//     for number in salary:
+//         if int(number) <= 9000:
+//             return name, salary
+
+//     else:
+
+//         return name, default_salary
+
+const greg = function () {
+  let fullName = prompt('Your full name');
+  let salary = Number(prompt('Your salary'));
+  let baseSalary = 9000;
+
+  if (salary <= 9000) {
+    return `Name: ${fullName} Salary :${baseSalary}`;
+  } else if (salary > 9000) {
+    return `Name: ${fullName} Salary :${salary}`;
+  } else {
+    return `please input a Number`;
   }
-  return arrayTwo.reverse();
 };
-const newArr = reverseMyArray(testArr);
-console.log(newArr);
-
-const noNeg = function () {};
+console.log(greg());
