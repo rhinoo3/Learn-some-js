@@ -124,31 +124,44 @@
 // const newArr = reverseMyArray(testArr);
 // console.log(newArr);
 
-// const noNeg = function () {};
-// const greg = show_employee():
-//     name = input("Employee name:  ")
-//     salary = input("Employee salary:  ")
-//     default_salary = 9000
+// const greg = function () {
+//   let fullName = prompt('Your full name');
+//   let salary = Number(prompt('Your salary'));
+//   let baseSalary = 9000;
 
-//     for number in salary:
-//         if int(number) <= 9000:
-//             return name, salary
+//   if (salary > 0 && salary <= 9000 && typeof fullName === 'alphanumberic') {
+//     return `Name: ${fullName} Salary :${baseSalary}`;
+//   } else if (salary > 9000 && typeof fullName === 'alphanumeric') {
+//     return `Name: ${fullName} Salary :${salary}`;
+//   } else if (typeof fullName !== 'alphanumeric') {
+//     return alert('Enter valid name');
+//   }
+// };
+// console.log(greg());
 
-//     else:
+/*
+Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
 
-//         return name, default_salary
+Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
 
-const greg = function () {
-  let fullName = prompt('Your full name');
-  let salary = Number(prompt('Your salary'));
-  let baseSalary = 9000;
+Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
 
-  if (salary <= 9000) {
-    return `Name: ${fullName} Salary :${baseSalary}`;
-  } else if (salary > 9000) {
-    return `Name: ${fullName} Salary :${salary}`;
-  } else {
-    return `please input a Number`;
+Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+TEST DATA 1: [17, 21, 23]
+TEST DATA 2: [12, 5, -5, 0, 4]
+*/
+
+const testData1 = [17, 21, 23];
+const testData2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  let str = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}C in ${i + 1} day(s) ... `;
   }
+  console.log('...' + str);
 };
-console.log(greg());
+printForecast(testData1);
+//If it was just 3 data points you could do this
