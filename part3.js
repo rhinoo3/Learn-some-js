@@ -150,67 +150,18 @@ Use the problem-solving framework: Understand the problem and break it up into s
 
 TEST DATA 1: [17, 21, 23]
 TEST DATA 2: [12, 5, -5, 0, 4]
-
-
-// const testData1 = [17, 21, 23];
-// const testData2 = [12, 5, -5, 0, 4];
-
-// const printForecast = function (arr) {
-//   let str = '';
-
-//   for (let i = 0; i < arr.length; i++) {
-//     str += `${arr[i]}C in ${i + 1} day(s) ... `;
-//   }
-//   console.log('...' + str);
-// };
-// printForecast(testData1);
-// //If it was just 3 data points you could do this
-
-const random = () => {
-  return Promise.resolve(Math.random());
-};
-
-const sumRandomAsyncNums = async () => {
-  const first = await random();
-  const second = await random();
-  const third = await random();
-
-  console.log(`result ${first + second + third}`);
-};
-sumRandomAsyncNums();
-
-const pet = false;
-
-if (pet === true) {
-  console.log('PooPoo');
-} else {
-  console.log('i do not');
-}
-
-let score1 = 20;
-let score2 = 15;
-let highScore;
-
-if (score1 > score2) {
-  highScore = score1;
-} else {
-  highScore = score2;
-}
-
-console.log(highScore);
-
-const ryanArray = [
-  (score1 = 20),
-  (score2 = 30),
-  (highScore = []),
-  (myName = Ryan),
-];
 */
 
-class book {
-  constructor(author, title, genre) {
-    this.author = author;
-    this.title = title;
-    this.genre = genre;
+const testData1 = [17, 21, 23];
+const testData2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  let str = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}C in ${i + 1} day(s) ... `;
   }
-}
+  console.log('...' + str);
+};
+printForecast(testData1);
+//If it was just 3 data points you could do this
