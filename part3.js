@@ -125,3 +125,5 @@ const newArr = reverseMyArray(testArr);
 console.log(newArr);
 
 const noNeg = function () {};
+//I forget everything there is to know about this
+/* in the future if i take a postion with Milton I can come home and fuck around with this shit and get a desk job that hurts my back when i sit */
