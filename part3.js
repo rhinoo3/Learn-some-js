@@ -27,8 +27,8 @@
 // };
 // console.log(oZ);
 // company building a smart home thermometer. Most recent task is this: Given an array of temperatures of one day, calculate the temperature amplitude. keep in mind sometimes there might be a sensor error.
-// const temperatures = [13, -2, -6, -1, 'error', 9, 25, 13, 17, 15, 14, 9, 5];
-// const temperatures2 = [14, -5, -7, -14, 'error', 17, 15, 8, 7, 3];
+// const temperatures = [13, 2, 6, 1, 'error', 9, 25, 13, 17, 15, 14, 9, 5];
+// const temperatures2 = [14, 5, 7, 14, 'error', 17, 15, 8, 7, 3];
 // console.log(temperatures);
 //1) understand the problem.
 // what is temp amplitude? Answer: difference between highest and lowest temp.
@@ -95,35 +95,125 @@
 // console.log(amplitudeNew);
 // Kelvin 273*temp
 // Prompt always returns a string//////////////////////
-const measureK = function () {
-  const measurement = {
-    type: 'temp',
-    unit: 'celsius',
-    value: Number(prompt('Degrees celcius')),
-  };
-  //found the bug, prompt returns a string
-  console.table(measurement);
-  // console.log(measurement.value);
-  // console.warn(measurement.value);
-  // console.error(measurement.value);
-  const kelvin = measurement.value + 273;
-  return kelvin;
-};
+// const measureK = function () {
+//   const measurement = {
+//     type: 'temp',
+//     unit: 'celsius',
+//     value: Number(prompt('Degrees celcius')),
+//   };
+//   //found the bug, prompt returns a string
+//   console.table(measurement);
+//   // console.log(measurement.value);
+//   // console.warn(measurement.value);
+//   // console.error(measurement.value);
+//   const kelvin = measurement.value + 273;
+//   return kelvin;
+// };
 // console.log(measureK());
 
-const testArr = [24, 25, 26, 27, 28];
-const reverseMyArray = function (arr) {
-  const arrayOne = arr;
-  let arrayTwo = [];
+// const testArr = [24, 25, 26, 27, 28];
+// const reverseMyArray = function (arr) {
+//   const arrayOne = arr;
+//   let arrayTwo = [];
 
-  for (let i = 0; i < arrayOne.length; i++) {
-    arrayTwo.push(arrayOne[i]);
-  }
-  return arrayTwo.reverse();
+//   for (let i = 0; i < arrayOne.length; i++) {
+//     arrayTwo.push(arrayOne[i]);
+//   }
+//   return arrayTwo.reverse();
+// };
+// const newArr = reverseMyArray(testArr);
+// console.log(newArr);
+
+// const greg = function () {
+//   let fullName = prompt('Your full name');
+//   let salary = Number(prompt('Your salary'));
+//   let baseSalary = 9000;
+
+//   if (salary > 0 && salary <= 9000 && typeof fullName === 'alphanumberic') {
+//     return `Name: ${fullName} Salary :${baseSalary}`;
+//   } else if (salary > 9000 && typeof fullName === 'alphanumeric') {
+//     return `Name: ${fullName} Salary :${salary}`;
+//   } else if (typeof fullName !== 'alphanumeric') {
+//     return alert('Enter valid name');
+//   }
+// };
+// console.log(greg());
+
+/*
+Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
+
+Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+
+Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+TEST DATA 1: [17, 21, 23]
+TEST DATA 2: [12, 5, -5, 0, 4]
+
+
+// const testData1 = [17, 21, 23];
+// const testData2 = [12, 5, -5, 0, 4];
+
+// const printForecast = function (arr) {
+//   let str = '';
+
+//   for (let i = 0; i < arr.length; i++) {
+//     str += `${arr[i]}C in ${i + 1} day(s) ... `;
+//   }
+//   console.log('...' + str);
+// };
+// printForecast(testData1);
+// //If it was just 3 data points you could do this
+
+const random = () => {
+  return Promise.resolve(Math.random());
 };
-const newArr = reverseMyArray(testArr);
-console.log(newArr);
+
+const sumRandomAsyncNums = async () => {
+  const first = await random();
+  const second = await random();
+  const third = await random();
+
+  console.log(`result ${first + second + third}`);
+};
+sumRandomAsyncNums();
+
+const pet = false;
+
+if (pet === true) {
+  console.log('PooPoo');
+} else {
+  console.log('i do not');
+}
+
+let score1 = 20;
+let score2 = 15;
+let highScore;
 
 const noNeg = function () {};
 //I forget everything there is to know about this
 /* in the future if i take a postion with Milton I can come home and fuck around with this shit and get a desk job that hurts my back when i sit */
+if (score1 > score2) {
+  highScore = score1;
+} else {
+  highScore = score2;
+}
+
+console.log(highScore);
+
+const ryanArray = [
+  (score1 = 20),
+  (score2 = 30),
+  (highScore = []),
+  (myName = Ryan),
+];
+*/
+
+class book {
+  constructor(author, title, genre) {
+    this.author = author;
+    this.title = title;
+    this.genre = genre;
+  }
+}
