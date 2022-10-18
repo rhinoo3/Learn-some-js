@@ -214,3 +214,20 @@ class book {
     this.genre = genre;
   }
 }
+const bookarray = [];
+
+const addBook = function () {
+  let author = prompt('author of a book please');
+  let title = prompt('title of book please');
+  let genre = prompt('type of genre please');
+  return new book(author, title, genre);
+};
+
+document.addEventListener('keydown', function(e))
+{}
+for (let i = 0; i <= 2; i++){
+  addBook()}{
+    if (e.key==='Escape'){
+      this.close;
+    }
+  }
