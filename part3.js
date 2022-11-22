@@ -194,43 +194,5 @@ let highScore;
 const noNeg = function () {};
 //I forget everything there is to know about this
 /* in the future if i take a postion with Milton I can come home and fuck around with this shit and get a desk job that hurts my back when i sit */
-if (score1 > score2) {
-  highScore = score1;
-} else {
-  highScore = score2;
-}
 
-console.log(highScore);
 
-const ryanArray = [
-  (score1 = 20),
-  (score2 = 30),
-  (highScore = []),
-  (myName = Ryan),
-];
-*/
-
-class book {
-  constructor(author, title, genre) {
-    this.author = author;
-    this.title = title;
-    this.genre = genre;
-  }
-}
-const bookarray = [];
-
-const addBook = function () {
-  let author = prompt('author of a book please');
-  let title = prompt('title of book please');
-  let genre = prompt('type of genre please');
-  return new book(author, title, genre);
-};
-
-document.addEventListener('keydown', function(e))
-{}
-for (let i = 0; i <= 2; i++){
-  addBook()}{
-    if (e.key==='Escape'){
-      this.close;
-    }
-  }
